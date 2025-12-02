@@ -4,9 +4,9 @@ import { Card, CardContent } from "@/components/ui/card";
 const benefits = [
   {
     icon: MapPin,
-    title: "Real-time EV Charger Map",
+    title: "EV Charger Map for the UK",
     description:
-      "Browse thousands of charging points across the UK with live status updates and detailed station information.",
+      "Browse thousands of charging points across the UK with up-to-date locations and detailed station information.",
   },
   {
     icon: MessageSquare,
