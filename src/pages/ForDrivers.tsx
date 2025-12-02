@@ -87,9 +87,12 @@ const ForDrivers = () => {
                 Your Complete Guide to{" "}
                 <span className="text-primary">UK EV Charging</span>
               </h1>
-              <p className="mb-8 text-lg text-muted-foreground md:text-xl">
+              <p className="mb-4 text-lg text-muted-foreground md:text-xl">
                 Find reliable charging points, avoid problem stations, and help
                 improve the UK's EV infrastructure. All for free.
+              </p>
+              <p className="mb-8 text-base text-muted-foreground">
+                You can report broken or busy chargers directly from the Autodun map.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
                 <Button asChild size="lg" className="gradient-hero">
@@ -103,6 +106,47 @@ const ForDrivers = () => {
                 </Button>
               </div>
             </div>
+          </Container>
+        </section>
+
+        {/* How to Report a Problem */}
+        <section className="py-16 bg-background">
+          <Container size="narrow">
+            <Card className="border-primary/20 shadow-md">
+              <CardContent className="pt-6 pb-8">
+                <h2 className="mb-6 text-2xl font-bold tracking-tight">
+                  How to report a charger problem
+                </h2>
+                <ol className="mb-6 space-y-3 text-muted-foreground">
+                  <li className="flex gap-3">
+                    <span className="font-semibold text-foreground">1.</span>
+                    <span>Open the EV map</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="font-semibold text-foreground">2.</span>
+                    <span>Tap the charger with the problem</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="font-semibold text-foreground">3.</span>
+                    <span>Click 'Report issue' and send a quick note</span>
+                  </li>
+                </ol>
+                <div className="flex flex-col gap-3 sm:flex-row">
+                  <Button asChild size="lg" className="gradient-hero">
+                    <a href="https://ev.autodun.com" target="_blank" rel="noreferrer">
+                      <MapPin className="mr-2 h-5 w-5" />
+                      Open EV Map
+                    </a>
+                  </Button>
+                  <Button asChild size="lg" variant="outline">
+                    <a href="/contact">
+                      <MessageSquare className="mr-2 h-5 w-5" />
+                      Still need help? Contact us
+                    </a>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </Container>
         </section>
 
