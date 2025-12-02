@@ -26,7 +26,7 @@ const Footer = () => {
               <img
                 src={logoIconLight}
                 alt="Autodun"
-                className="h-6 w-6 shrink-0 -mr-[2px]" // same behaviour as header
+                className="h-5 w-5 shrink-0 -mr-[1px]"  // ← keep header + footer consistent
               />
               <span className="text-xl font-semibold tracking-tight leading-none text-foreground">
                 utodun
