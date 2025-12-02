@@ -29,13 +29,13 @@ const HeroSection = () => {
             {/* CTAs */}
             <div className="flex flex-col gap-4 sm:flex-row">
               <Button asChild size="lg" className="gradient-hero text-base">
-                <a href="https://ev.autodun.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://ev.autodun.com" target="_blank" rel="noreferrer">
                   <MapPin className="mr-2 h-5 w-5" />
                   Find Charging Points
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="text-base">
-                <Link to="/contact">
+                <Link to="/for-drivers">
                   <Flag className="mr-2 h-5 w-5" />
                   Report a Charger Issue
                 </Link>
