@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { MapPin, Flag, Sparkles } from "lucide-react";
-import heroImage from "@/assets/hero-ev-charging.jpg";
+import HeroAnimation from "./HeroAnimation";
 
 const HeroSection = () => {
   return (
@@ -48,23 +48,9 @@ const HeroSection = () => {
             </p>
           </div>
 
-          {/* Right: Mock Dashboard Card */}
+          {/* Right: Animated Demo */}
           <div className="relative">
-            <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-xl">
-              <img
-                src={heroImage}
-                alt="EV Charging Dashboard"
-                className="h-full w-full object-cover"
-              />
-              {/* TODO: Replace with live EV map embed from ev.autodun.com */}
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-background/80 to-transparent">
-                <div className="rounded-lg bg-background/95 px-6 py-4 shadow-lg backdrop-blur">
-                  <p className="text-sm font-medium text-muted-foreground">
-                    Interactive EV Map Coming Soon
-                  </p>
-                </div>
-              </div>
-            </div>
+            <HeroAnimation />
 
             {/* Floating Stats */}
             <div className="absolute -bottom-4 -left-4 rounded-xl border border-border bg-card p-4 shadow-lg">
