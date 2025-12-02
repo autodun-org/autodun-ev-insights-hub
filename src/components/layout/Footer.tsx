@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import logoIconLight from "@/assets/logo-icon-light.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,9 +21,9 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center gap-1 transition-smooth hover:opacity-80">
               <img 
-                src="/logo-autodun-mark.svg" 
+                src={logoIconLight} 
                 alt="Autodun" 
-                className="h-6 w-6 shrink-0"
+                className="h-6 w-6 shrink-0 -ml-[1px]"
               />
               <span className="text-xl font-semibold tracking-tight leading-none text-foreground">utodun</span>
             </Link>
