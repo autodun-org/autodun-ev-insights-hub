@@ -23,11 +23,10 @@ const Footer = () => {
               to="/"
               className="flex items-center transition-smooth hover:opacity-80"
             >
-              {/* A-icon used as first letter of Autodun */}
               <img
                 src={logoIconLight}
                 alt="Autodun"
-                className="mr-[2px] h-6 w-6 shrink-0"
+                className="h-6 w-6 shrink-0 -mr-[2px]" // same behaviour as header
               />
               <span className="text-xl font-semibold tracking-tight leading-none text-foreground">
                 utodun
