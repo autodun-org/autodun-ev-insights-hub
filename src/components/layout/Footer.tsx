@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Zap } from "lucide-react";
+import logoIconLight from "@/assets/logo-icon-light.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -19,10 +19,12 @@ const Footer = () => {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {/* Brand */}
           <div>
-            <Link to="/" className="flex items-center gap-2 transition-smooth hover:opacity-80">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
-                <Zap className="h-6 w-6 text-primary-foreground" />
-              </div>
+            <Link to="/" className="flex items-center gap-3 transition-smooth hover:opacity-80">
+              <img 
+                src={logoIconLight} 
+                alt="Autodun Logo" 
+                className="h-10 w-10 object-contain"
+              />
               <span className="text-xl font-bold tracking-tight">Autodun</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
