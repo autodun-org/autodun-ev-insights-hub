@@ -23,13 +23,13 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Hybrid Wordmark Logo */}
-        <Link to="/" className="inline-flex items-center gap-1 transition-smooth hover:opacity-80">
+        <Link to="/" className="flex items-center gap-1 transition-smooth hover:opacity-80">
           <img 
             src={logoIconLight} 
             alt="Autodun" 
-            className="h-8 w-8 object-contain"
+            className="h-6 w-6 shrink-0 -ml-[1px]"
           />
-          <span className="text-2xl font-bold tracking-tight text-foreground">
+          <span className="text-xl font-semibold tracking-tight leading-none text-foreground">
             utodun
           </span>
         </Link>
