@@ -40,10 +40,10 @@ const BenefitsSection = () => {
           {benefits.map((benefit, index) => (
             <Card
               key={index}
-              className="group border-border transition-smooth hover:border-primary/50 hover:shadow-lg"
+              className="group border-border bg-surface transition-smooth hover:border-primary/50 hover:shadow-lg"
             >
               <CardContent className="pt-6">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 transition-smooth group-hover:bg-primary/20">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-subtle transition-smooth group-hover:bg-primary-light">
                   <benefit.icon className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="mb-2 text-xl font-semibold">{benefit.title}</h3>

@@ -19,13 +19,13 @@ const Footer = () => {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {/* Brand */}
           <div>
-            <Link to="/" className="flex items-center gap-3 transition-smooth hover:opacity-80">
+            <Link to="/" className="flex items-center gap-0.5 transition-smooth hover:opacity-80">
               <img 
                 src={logoIconLight} 
-                alt="Autodun Logo" 
-                className="h-10 w-10 object-contain"
+                alt="Autodun" 
+                className="h-9 w-9 object-contain"
               />
-              <span className="text-xl font-bold tracking-tight">Autodun</span>
+              <span className="text-xl font-bold tracking-tight">utodun</span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">
               EV charging intelligence for the UK. Helping drivers find better

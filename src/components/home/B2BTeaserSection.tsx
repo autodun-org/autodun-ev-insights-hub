@@ -41,7 +41,7 @@ const B2BTeaserSection = () => {
           {audiences.map((audience, index) => (
             <Card key={index} className="border-border bg-gradient-card">
               <CardContent className="pt-6">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary-subtle">
                   <audience.icon className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="mb-2 text-xl font-semibold">{audience.title}</h3>

@@ -10,7 +10,7 @@ const HeroSection = () => {
         <div className="grid items-center gap-12 lg:grid-cols-2">
           {/* Left: Content */}
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary">
+            <div className="inline-flex items-center gap-2 rounded-full bg-primary-subtle px-4 py-2 text-sm font-medium text-primary">
               <Sparkles className="h-4 w-4" />
               EV Intelligence Platform for the UK
             </div>
