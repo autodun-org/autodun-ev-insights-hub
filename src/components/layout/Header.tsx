@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logoIconLight from "@/assets/logo-icon-light.png";
+
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -25,9 +25,9 @@ const Header = () => {
         {/* Hybrid Wordmark Logo */}
         <Link to="/" className="flex items-center gap-1 transition-smooth hover:opacity-80">
           <img 
-            src={logoIconLight} 
+            src="/logo-autodun-mark.svg" 
             alt="Autodun" 
-            className="h-6 w-6 shrink-0 -ml-[1px]"
+            className="h-6 w-6 shrink-0"
           />
           <span className="text-xl font-semibold tracking-tight leading-none text-foreground">
             utodun
