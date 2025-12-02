@@ -13,7 +13,22 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
       colors: {
+        'ev-green': {
+          DEFAULT: 'hsl(var(--ev-green))',
+          light: 'hsl(var(--ev-green-light))',
+          dark: 'hsl(var(--ev-green-dark))',
+        },
+        'neutral': {
+          50: 'hsl(var(--neutral-50))',
+          100: 'hsl(var(--neutral-100))',
+          200: 'hsl(var(--neutral-200))',
+          800: 'hsl(var(--neutral-800))',
+          900: 'hsl(var(--neutral-900))',
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
