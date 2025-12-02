@@ -30,7 +30,7 @@ const Header = () => {
           <img
             src={logoIconLight}
             alt="Autodun"
-            className="h-6 w-6 shrink-0 -mr-[2px]"  // A sticks into the word
+            className="h-5 w-5 shrink-0 -mr-[1px]"   // ← smaller icon + slight negative gap
           />
           <span className="text-xl font-semibold tracking-tight leading-none text-foreground">
             utodun
