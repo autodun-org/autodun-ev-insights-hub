@@ -3,7 +3,8 @@ import Footer from "@/components/layout/Footer";
 import Container from "@/components/layout/Container";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, MessageSquare, TrendingUp, Shield, Zap, Users } from "lucide-react";
+import { Link } from "react-router-dom";
+import { MapPin, MessageSquare, Star, ShieldCheck, Users, ThumbsUp } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -13,61 +14,60 @@ import {
 
 const benefits = [
   {
-    icon: MapPin,
-    title: "Find Any Charger",
-    description: "Access a comprehensive map of every public EV charging point across the UK, with live status updates.",
+    icon: ShieldCheck,
+    title: "Avoid bad charging stops",
+    description: "See which chargers actually work before you drive there. No more wasted trips to broken or out-of-service stations.",
   },
   {
     icon: MessageSquare,
-    title: "Report Issues Fast",
-    description: "Broken charger? App not working? Report problems in seconds and help other drivers.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Improve Infrastructure",
-    description: "Your feedback directly influences where councils and networks invest in new charging points.",
-  },
-  {
-    icon: Shield,
-    title: "Avoid Bad Stations",
-    description: "See ratings and reviews from real drivers to avoid unreliable or poorly maintained chargers.",
-  },
-  {
-    icon: Zap,
-    title: "Plan Your Journey",
-    description: "Check charger availability along your route and find backup options near your destination.",
+    title: "See real driver feedback",
+    description: "Read ratings and comments from other UK EV drivers. Know what to expect before you arrive.",
   },
   {
     icon: Users,
-    title: "Join the Community",
-    description: "Be part of a growing community of UK EV drivers working together to improve charging.",
+    title: "Help fix the network",
+    description: "Your reports and ratings feed into data used by councils and charging networks to improve infrastructure.",
+  },
+];
+
+const steps = [
+  {
+    number: "1",
+    title: "Open the map",
+    description: "Visit ev.autodun.com on any device. No app download or login required.",
+  },
+  {
+    number: "2",
+    title: "Check score & feedback",
+    description: "Tap any charger to see its reliability score and recent driver feedback.",
+  },
+  {
+    number: "3",
+    title: "Leave a rating",
+    description: "After charging, rate your experience to help other drivers and improve the network.",
   },
 ];
 
 const faqs = [
   {
     question: "Is Autodun free to use?",
-    answer: "Yes! Autodun is completely free for all EV drivers. No subscriptions, no hidden fees. We believe everyone should have access to reliable charging information.",
+    answer: "Yes! Autodun is completely free for all UK EV drivers. No subscriptions, no hidden fees, no premium tiers.",
   },
   {
     question: "Do I need to create an account?",
-    answer: "No account is required to view the map and search for charging points. However, if you want to report issues or leave feedback, you'll need to create a free account (coming soon).",
+    answer: "No account is required to view the map, search for chargers, or check ratings. You can use it anonymously right now.",
   },
   {
-    question: "How is my data used?",
-    answer: "We aggregate feedback and usage patterns to help councils and charging networks make better infrastructure decisions. All data is anonymized, and we never sell personal information to third parties.",
+    question: "Where does your data come from?",
+    answer: "We combine official UK charger registry data with real-time driver feedback and reliability reports to give you the most accurate picture.",
   },
   {
-    question: "How do I report a broken charger?",
-    answer: "Simply use our contact form or the 'Report Issue' button on the EV Finder map. Provide the station details and describe the problem. We'll notify the relevant network operator.",
+    question: "Is my data private?",
+    answer: "Yes. We don't track your location or sell personal data. Any feedback you submit is aggregated and anonymized.",
   },
   {
-    question: "Can I suggest a new charging location?",
-    answer: "Absolutely! We welcome suggestions for new charging locations. Use our contact form to tell us where you think a charger would be most useful and why.",
-  },
-  {
-    question: "Is Autodun available outside the UK?",
-    answer: "Currently, Autodun focuses exclusively on the UK market. However, we're exploring expansion to other regions in the future.",
+    question: "Is this UK only?",
+    answer: "Currently, Autodun focuses exclusively on the UK. We're exploring other regions for the future.",
   },
 ];
 
@@ -81,90 +81,48 @@ const ForDrivers = () => {
           <Container>
             <div className="mx-auto max-w-3xl text-center">
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary">
-                For EV Drivers
+                Built for EV drivers in the UK
               </div>
               <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-                Your Complete Guide to{" "}
-                <span className="text-primary">UK EV Charging</span>
+                Find chargers that{" "}
+                <span className="text-primary">actually work</span> for you.
               </h1>
-              <p className="mb-4 text-lg text-muted-foreground md:text-xl">
-                Find reliable charging points, avoid problem stations, and help
-                improve the UK's EV infrastructure. All for free.
-              </p>
-              <p className="mb-8 text-base text-muted-foreground">
-                You can report broken or busy chargers directly from the Autodun map.
+              <p className="mb-8 text-lg text-muted-foreground md:text-xl">
+                Stop arriving at broken or busy chargers. See real driver feedback, 
+                reliability trends, and find spots that work — before you drive there.
               </p>
               <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
                 <Button asChild size="lg" className="gradient-hero">
                   <a href="https://ev.autodun.com" target="_blank" rel="noopener noreferrer">
                     <MapPin className="mr-2 h-5 w-5" />
-                    Open EV Map
+                    Open EV map now
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="outline">
-                  <a href="#faq">View FAQs</a>
+                  <Link to="/for-councils">See how councils use this</Link>
                 </Button>
               </div>
+              <p className="mt-6 text-sm text-muted-foreground">
+                Free for UK drivers · No login required · Works on mobile & desktop
+              </p>
             </div>
           </Container>
         </section>
 
-        {/* How to Report a Problem */}
-        <section className="py-16 bg-background">
-          <Container size="narrow">
-            <Card className="border-primary/20 shadow-md">
-              <CardContent className="pt-6 pb-8">
-                <h2 className="mb-6 text-2xl font-bold tracking-tight">
-                  How to report a charger problem
-                </h2>
-                <ol className="mb-6 space-y-3 text-muted-foreground">
-                  <li className="flex gap-3">
-                    <span className="font-semibold text-foreground">1.</span>
-                    <span>Open the EV map</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="font-semibold text-foreground">2.</span>
-                    <span>Tap the charger with the problem</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="font-semibold text-foreground">3.</span>
-                    <span>Click 'Report issue' and send a quick note</span>
-                  </li>
-                </ol>
-                <div className="flex flex-col gap-3 sm:flex-row">
-                  <Button asChild size="lg" className="gradient-hero">
-                    <a href="https://ev.autodun.com" target="_blank" rel="noreferrer">
-                      <MapPin className="mr-2 h-5 w-5" />
-                      Open EV Map
-                    </a>
-                  </Button>
-                  <Button asChild size="lg" variant="outline">
-                    <a href="/contact">
-                      <MessageSquare className="mr-2 h-5 w-5" />
-                      Still need help? Contact us
-                    </a>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </Container>
-        </section>
-
-        {/* Benefits Grid */}
+        {/* Benefits Section */}
         <section className="py-20">
           <Container>
             <div className="mb-12 text-center">
               <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
-                Everything You Need
+                Why drivers use Autodun
               </h2>
               <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-                Autodun gives you all the tools to navigate the UK's EV charging
-                network with confidence.
+                A smarter way to find EV charging across the UK
               </p>
             </div>
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-8 md:grid-cols-3">
               {benefits.map((benefit, index) => (
-                <Card key={index} className="border-border transition-smooth hover:shadow-lg">
+                <Card key={index} className="border-border transition-smooth hover:shadow-lg hover:border-primary/30">
                   <CardContent className="pt-6">
                     <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
                       <benefit.icon className="h-6 w-6 text-primary" />
@@ -178,24 +136,33 @@ const ForDrivers = () => {
           </Container>
         </section>
 
-        {/* How to Get Started */}
+        {/* How It Works Section */}
         <section className="bg-neutral-50 py-20">
-          <Container size="narrow">
-            <div className="text-center">
+          <Container>
+            <div className="mb-12 text-center">
               <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
-                Get Started in Seconds
+                How it works
               </h2>
-              <p className="mb-8 text-lg text-muted-foreground">
-                No complicated setup. Just visit the map and start exploring.
+              <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+                Three simple steps to better charging
               </p>
-              <Button asChild size="lg" className="gradient-hero">
-                <a href="https://ev.autodun.com" target="_blank" rel="noopener noreferrer">
-                  Launch EV Finder →
-                </a>
-              </Button>
-              <p className="mt-4 text-sm text-muted-foreground">
-                Works on all devices · No app download required
-              </p>
+            </div>
+            <div className="grid gap-8 md:grid-cols-3">
+              {steps.map((step, index) => (
+                <div key={index} className="relative text-center">
+                  {/* Connector Line */}
+                  {index < steps.length - 1 && (
+                    <div className="absolute left-1/2 top-12 hidden h-1 w-full bg-gradient-to-r from-primary to-primary/20 md:block" />
+                  )}
+                  <div className="relative">
+                    <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full border-4 border-primary/20 bg-background">
+                      <span className="text-3xl font-bold text-primary">{step.number}</span>
+                    </div>
+                    <h3 className="mb-2 text-xl font-semibold">{step.title}</h3>
+                    <p className="text-muted-foreground">{step.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </Container>
         </section>
@@ -208,7 +175,7 @@ const ForDrivers = () => {
                 Frequently Asked Questions
               </h2>
               <p className="text-lg text-muted-foreground">
-                Everything you need to know about using Autodun
+                Quick answers for UK EV drivers
               </p>
             </div>
             <Accordion type="single" collapsible className="w-full">
@@ -231,15 +198,15 @@ const ForDrivers = () => {
           <Container>
             <div className="mx-auto max-w-3xl rounded-2xl border border-primary/20 bg-background p-8 text-center shadow-xl md:p-12">
               <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
-                Ready to Find Better Charging?
+                Ready to try a smarter EV charging map?
               </h2>
               <p className="mb-8 text-lg text-muted-foreground">
-                Join thousands of UK EV drivers using Autodun to navigate the
-                charging network with confidence.
+                Join thousands of UK drivers finding better chargers with Autodun.
               </p>
               <Button asChild size="lg" className="gradient-hero">
                 <a href="https://ev.autodun.com" target="_blank" rel="noopener noreferrer">
-                  Open EV Map Now
+                  <MapPin className="mr-2 h-5 w-5" />
+                  Open Autodun EV map
                 </a>
               </Button>
             </div>
