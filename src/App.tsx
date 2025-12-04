@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import ForDrivers from "./pages/ForDrivers";
 import ForCouncils from "./pages/ForCouncils";
+import CouncilDashboard from "./pages/CouncilDashboard";
 import Roadmap from "./pages/Roadmap";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/for-drivers" element={<ForDrivers />} />
           <Route path="/for-councils" element={<ForCouncils />} />
+          <Route path="/council-dashboard" element={<CouncilDashboard />} />
           <Route path="/roadmap" element={<Roadmap />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
