@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logoIconLight from "@/assets/logo-icon-light.png";
+import { Zap } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -23,16 +23,18 @@ const Footer = () => {
               to="/"
               className="flex items-center transition-smooth hover:opacity-80"
             >
-              <img
-                src={logoIconLight}
-                alt="Autodun"
-                className="h-6 w-6 shrink-0 -mr-[2px]"
-              />
+              {/* Same style logo as header, slightly smaller */}
               <span className="flex items-baseline font-semibold leading-none">
-                <span className="inline-block text-[1.4rem] text-primary">
-                  A
+                <span className="relative inline-flex items-center">
+                  <span className="text-[1.4rem] md:text-[1.6rem] text-[#16a34a] font-extrabold">
+                    A
+                  </span>
+                  <Zap
+                    className="absolute -top-1 -right-3 h-3 w-3 text-[#16a34a]"
+                    aria-hidden="true"
+                  />
                 </span>
-                <span className="inline-block text-[1rem] tracking-tight text-foreground -ml-[1px]">
+                <span className="ml-[1px] text-[1.05rem] md:text-[1.15rem] tracking-tight text-foreground">
                   utodun
                 </span>
               </span>
