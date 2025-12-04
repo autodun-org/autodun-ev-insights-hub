@@ -72,6 +72,18 @@ const CouncilDashboard = () => {
             <p className="text-lg text-muted-foreground">
               This is a demo view showing sample data. Book a demo to see real data for your council area.
             </p>
+            <p className="mt-3 text-sm text-muted-foreground">
+              This dashboard is mainly for local authorities and partners to explore EV charging insights.{" "}
+              Regular drivers can continue using the main{" "}
+              <a
+                href="https://ev.autodun.com"
+                target="_blank"
+                rel="noreferrer"
+                className="text-primary underline hover:text-primary/80"
+              >
+                Autodun EV map
+              </a>.
+            </p>
           </div>
 
           {/* Key Metrics */}
