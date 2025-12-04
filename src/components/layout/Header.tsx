@@ -1,8 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Zap } from "lucide-react";
 import { useState } from "react";
-import logoIconLight from "@/assets/logo-icon-light.png";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -20,21 +19,25 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/70 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container mx-auto flex h-16 items-center justify-between px-4">
-        {/* Hybrid Wordmark Logo */}
+        {/* Logo – single A with small icon + utodun */}
         <Link
           to="/"
           className="flex items-center transition-smooth hover:opacity-80"
         >
-          <img
-            src={logoIconLight}
-            alt="Autodun"
-            className="h-6 w-6 md:h-7 md:w-7 shrink-0 -mr-[2px]"
-          />
           <span className="flex items-baseline font-semibold leading-none">
-            <span className="inline-block text-[1.6rem] md:text-[1.8rem] text-primary">
-              A
+            {/* Big green A with small icon */}
+            <span className="relative inline-flex items-center">
+              <span className="text-[1.6rem] md:text-[1.8rem] text-[#16a34a]">
+                A
+              </span>
+              <Zap
+                className="absolute -top-1 -right-3 h-3 w-3 md:h-3.5 md:w-3.5 text-[#16a34a]"
+                aria-hidden="true"
+              />
             </span>
-            <span className="inline-block text-[1.15rem] md:text-[1.25rem] tracking-tight text-foreground -ml-[1px]">
+
+            {/* rest of word – no extra A, no gap */}
+            <span className="ml-[1px] text-[1.15rem] md:text-[1.25rem] tracking-tight text-foreground">
               utodun
             </span>
           </span>
