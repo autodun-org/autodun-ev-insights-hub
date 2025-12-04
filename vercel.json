@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/ev-charging-council-dashboard",
+      "destination": "https://ev.autodun.com/ev-charging-council-dashboard",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
