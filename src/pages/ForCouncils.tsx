@@ -125,10 +125,14 @@ const ForCouncils = () => {
                   <Link to="/contact">Book a council demo</Link>
                 </Button>
                 <Button asChild size="lg" variant="outline">
-                  <Link to="/council-dashboard">
+                  <a
+                    href="https://ev.autodun.com/ev-charging-council-dashboard"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <BarChart3 className="mr-2 h-5 w-5" />
                     Open council insight dashboard
-                  </Link>
+                  </a>
                 </Button>
               </div>
             </div>
@@ -257,10 +261,14 @@ const ForCouncils = () => {
                   <Link to="/contact">Book a council demo</Link>
                 </Button>
                 <Button asChild size="lg" variant="outline">
-                  <Link to="/council-dashboard">
+                  <a
+                    href="https://ev.autodun.com/ev-charging-council-dashboard"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <BarChart3 className="mr-2 h-5 w-5" />
                     View demo dashboard
-                  </Link>
+                  </a>
                 </Button>
               </div>
               <p className="mt-6 text-sm text-muted-foreground">
