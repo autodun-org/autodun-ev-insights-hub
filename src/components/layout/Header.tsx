@@ -27,7 +27,7 @@ const Header = () => {
           <span className="flex items-baseline font-semibold leading-none">
             {/* Big green A with small icon */}
             <span className="relative inline-flex items-center">
-              <span className="text-[1.6rem] md:text-[1.8rem] text-[#16a34a]">
+              <span className="text-[1.6rem] md:text-[1.8rem] text-[#16a34a] font-extrabold">
                 A
               </span>
               <Zap
