@@ -26,10 +26,15 @@ const Footer = () => {
               <img
                 src={logoIconLight}
                 alt="Autodun"
-                className="h-5 w-5 shrink-0 -mr-[1px]"  // ← keep header + footer consistent
+                className="h-6 w-6 shrink-0 -mr-[2px]"
               />
-              <span className="text-xl font-semibold tracking-tight leading-none text-foreground">
-                utodun
+              <span className="flex items-baseline font-semibold leading-none">
+                <span className="inline-block text-[1.4rem] text-primary">
+                  A
+                </span>
+                <span className="inline-block text-[1rem] tracking-tight text-foreground -ml-[1px]">
+                  utodun
+                </span>
               </span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground">

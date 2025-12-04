@@ -30,11 +30,11 @@ const Header = () => {
             alt="Autodun"
             className="h-6 w-6 md:h-7 md:w-7 shrink-0 -mr-[2px]"
           />
-          <span className="flex items-baseline font-semibold leading-none text-foreground">
-            <span className="inline-block text-[1.6rem] md:text-[1.8rem]">
+          <span className="flex items-baseline font-semibold leading-none">
+            <span className="inline-block text-[1.6rem] md:text-[1.8rem] text-primary">
               A
             </span>
-            <span className="inline-block text-[1.15rem] md:text-[1.25rem] tracking-tight">
+            <span className="inline-block text-[1.15rem] md:text-[1.25rem] tracking-tight text-foreground -ml-[1px]">
               utodun
             </span>
           </span>
